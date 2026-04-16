@@ -2,16 +2,24 @@
 
 def clean_database(record_ids):
     # Fix 1: Loop backwards to safely remove odd numbers
+
     for i in range(len(record_ids) - 1, -1, -1):
         if record_ids[i] % 2 != 0:
             record_ids.remove(record_ids[i])
     return record_ids
+
+data = [1, 3, 4, 6, 7, 9, 10]
+clean = clean_database(data)
+print(clean)
 
 #fix two: Create a new list with only even numbers
 
 def clean_database(record_ids):
     # Fix 2: Create a new list with only even numbers
     return [record_id for record_id in record_ids if record_id % 2 == 0]
+data = [1, 3, 4, 6, 7, 9, 10]
+clean = clean_database(data)
+print(clean)
 
 
 """
